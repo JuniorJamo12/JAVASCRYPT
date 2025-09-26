@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+            body,input{
+                font: normal 20pt arial;
+            }
+       </style>
+</head>
+<body>
+
+    <h1>nacionalidade</h1>
+
+    <label for="naci">nacionalidade</label>
+    <input type="text" id="nati">
+    <input type="button" value="submeter" id="sub">
+
+
+    <script>
+           var a = document.getElementById('sub')
+           a.addEventListener('click',checar)
+
+       function checar() {
+            var x = document.getElementById('nati')
+            x = x.value
+            // var x = a.value
+           if (x =='USA')
+           {
+              document.write('<p> a sua nacionalidade e <strong>americana</strong>')
+           }
+           else if ( x == 'BR'){
+            document.write('<p> a sua nacionalidade e <strong>brasileira</strong>')
+           }
+           else{
+            document.write('<p> a sua nacionalidade e <strong>estrangeira</strong>')
+
+           }
+        }  
+
+    </script>
+    
+</body>
+</html>

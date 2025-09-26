@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body,input{
+            font: normal 20pt arial;
+
+          }
+    </style>
+</head>
+<body>
+
+    <h1>sistemas de multa</h1>
+    <label for="vel">velocidade</label>
+    <input type="number" id="vel"> km/h <br>
+    <input type="button" value="submeter" id="subm">
+
+  <script>
+       var a = document.getElementById('subm')
+       a.addEventListener('click',clicou)
+
+       function clicou(){
+           var a = document.getElementById('vel')
+           var velocidade = Number(a.value)
+
+           if (velocidade > 60){
+              document.write('<p style= font-size:40px>excedeu a velocidade , <strong>tem MULTA</strong></p>')
+           }
+           else{
+             document.write('<p style=font-size:40px>e sua <strong>obrigacao</strong> cumprir com as normas , nao ha parabens.</p>')
+           }
+       } 
+  </script>
+    
+</body>
+</html>
